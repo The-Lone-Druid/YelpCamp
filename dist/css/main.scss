@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@100;200;300;400;500;600;700;800;900&display=swap');
+// Custom.scss
+// Option B: Include parts of Bootstrap
+
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "../../node_modules/bootstrap/scss/functions";
+
+// 2. Include any default variable overrides here
+$font-family-sans-serif: 'Archivo', sans-serif;
+
+// Create your own map
+$yelp-primary: #F9F6F1;
+$yelp-secondary: #585857;
+$yelp-dark: #000000;
+$yelp-link: #128BB6;
+
+$custom-colors: (
+    "yelp-primary": $yelp-primary,
+    "yelp-secondary": $yelp-secondary,
+    "yelp-dark": $yelp-dark,
+    "yelp-link": $yelp-link
+);
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import "../../node_modules/bootstrap/scss/variables";
+
+// Merge the maps
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/root";
+
+// 4. Include any optional Bootstrap CSS as needed
+@import "../../node_modules/bootstrap/scss/utilities";
+
+// Utilities
+$utilities: map-merge(
+  $utilities,
+  (
+    "background-color": map-merge(
+      map-get($utilities, "background-color"),
+      (
+        values: map-merge(
+          map-get(map-get($utilities, "background-color"), "values"),
+          (
+              "yelp-primary": $yelp-primary,
+              "yelp-secondary": $yelp-secondary,
+              "yelp-dark": $yelp-dark,
+              "yelp-link": $yelp-link,
+            ),
+        ),
+      ),
+    ),
+    "color": map-merge(
+      map-get($utilities, "color"),
+      (
+        values: map-merge(
+          map-get(map-get($utilities, "color"), "values"),
+          (
+              "yelp-primary": $yelp-primary,
+              "yelp-secondary": $yelp-secondary,
+              "yelp-dark": $yelp-dark,
+              "yelp-link": $yelp-link,
+            ),
+        ),
+      ),
+    ),
+    "font-weight": map-merge(
+      map-get($utilities, "font-weight"),
+      (
+        values: map-merge(
+          map-get(map-get($utilities, "font-weight"), "values"),
+          (
+            500: 500,
+            medium: 600,
+            extrabold: 800,
+          ),
+        ),
+      ),
+    ),
+  )
+);
+
+@import "../../node_modules/bootstrap/scss/reboot";
+@import "../../node_modules/bootstrap/scss/type";
+@import "../../node_modules/bootstrap/scss/images";
+@import "../../node_modules/bootstrap/scss/containers";
+@import "../../node_modules/bootstrap/scss/grid";
+@import "../../node_modules/bootstrap/scss/forms";
+@import "../../node_modules/bootstrap/scss/buttons";
+@import "../../node_modules/bootstrap/scss/navbar";
+@import "../../node_modules/bootstrap/scss/nav";
+
+@import "../../node_modules/bootstrap/scss/helpers";
+
+
+// 5. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
+@import "../../node_modules/bootstrap/scss/utilities/api";
+
+// 6. Add additional custom code here
+
+.vh-md-auto {
+  @include media-breakpoint-down(xl) {
+    height: auto !important;
+  }
+}
+
+.hero-image-container {
+  background: url('../../assets/hero_image.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.vh-dynamic {
+  height: 100vh;
+  @include media-breakpoint-down(lg) {
+    height: auto !important;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .w-md-set:nth-child(1) {
+    width: 80px;
+  }
+  .w-md-set:nth-child(2) {
+    width: 90px;
+  }
+  .w-md-set:nth-child(3) {
+    width: 100px;
+  }
+}
