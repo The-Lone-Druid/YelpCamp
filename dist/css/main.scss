@@ -90,6 +90,12 @@ $utilities: map-merge(
 @import "../../node_modules/bootstrap/scss/buttons";
 @import "../../node_modules/bootstrap/scss/navbar";
 @import "../../node_modules/bootstrap/scss/nav";
+@import "../../node_modules/bootstrap/scss/dropdown";
+@import "../../node_modules/bootstrap/scss/spinners";
+@import "../../node_modules/bootstrap/scss/tables";
+@import "../../node_modules/bootstrap/scss/toasts";
+@import "../../node_modules/bootstrap/scss/tooltip";
+@import "../../node_modules/bootstrap/scss/transitions";
 
 @import "../../node_modules/bootstrap/scss/helpers";
 
@@ -99,6 +105,7 @@ $utilities: map-merge(
 
 // 6. Add additional custom code here
 
+// CSS for landing-page
 .vh-md-auto {
   @include media-breakpoint-down(xl) {
     height: auto !important;
@@ -129,4 +136,8 @@ $utilities: map-merge(
   .w-md-set:nth-child(3) {
     width: 100px;
   }
+}
+
+.text-underline {
+  border-bottom: 2px solid $yelp-secondary;
 }
