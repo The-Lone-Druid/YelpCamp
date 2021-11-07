@@ -2,3 +2,25 @@
   border: none;
   outline: none;
 }
+
+.form-yelpcamp {
+  background: #F7F7F7;
+  padding: 15px 20px 15px 20px;
+  border: none;
+}
+
+.form-yelpcamp::-webkit-input-placeholder {
+  color: #8b8b8b;
+}
+
+.form-yelpcamp:-ms-input-placeholder {
+  color: #8b8b8b;
+}
+
+.form-yelpcamp::-ms-input-placeholder {
+  color: #8b8b8b;
+}
+
+.form-yelpcamp::placeholder {
+  color: #8b8b8b;
+}
