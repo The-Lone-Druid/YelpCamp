@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../dist/css/main.css">
+    <link rel="stylesheet" href="../dist/css/fast.css">
+    <title>YelpCamp | Add Campgrounds</title>
+</head>
+<body>
+    
+    <header>
+        <nav class="navbar navbar-expand-lg py-4">
+            <div class="container">
+                <a href="../index.html" class="navbar-brand">
+                    <img src="../assets/Logo.svg" alt="">
+                </a>
+                <button class="navbar-toggler bg-yelp-primary py-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <img src="../assets/Hamburger Menu.svg" alt="">
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="../campgrounds/home.html" class="nav-link text-yelp-secondary fw-medium">Home</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ms-auto align-items-lg-center">
+                        <li class="nav-item me-3">
+                            <a href="#" class="nav-link text-yelp-secondary fw-medium">
+                                Login
+                            </a>
+                        </li>
+                        <li class="nav-item mt-lg-0 mt-3">
+                            <a href="#" class="nav-link btn btn-yelp-dark py-3 text-yelp-primary fw-500 px-4">
+                                Create an account
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="col-md-4 mx-auto py-5">
+            <h2 class="fw-extrabold">Add New Campground</h2>
+            <form action="#" class="mt-4">
+                <div class="form-group">
+                    <label for="#" class="text-yelp-secondary mb-2 fw-500">Campground Name</label>
+                    <input type="text" name="campground_name" id="campground_name" class="form-control form-yelpcamp" placeholder="Seven Sisters Waterfall">
+                </div>
+                <div class="form-group mt-3">
+                    <label for="#" class="text-yelp-secondary mb-2 fw-500">Price</label>
+                    <input type="password" name="Price" id="Price" class="form-control form-yelpcamp" placeholder="$149">
+                </div>
+                <div class="form-group mt-3">
+                    <label for="#" class="text-yelp-secondary mb-2 fw-500">Image</label>
+                    <input type="url" name="image" id="image" class="form-control form-yelpcamp" placeholder="Image URL">
+                </div>
+                <div class="form-group mt-3">
+                    <label for="#" class="text-yelp-secondary mb-2 fw-500">Description</label>
+                    <textarea name="description" rows="7" id="description" class="form-control form-yelpcamp" placeholder="Write description about your campground"></textarea>
+                </div>
+                <div class="mt-4">
+                    <button class="btn btn-yelp-dark w-100 py-3 px-4 fw-500" type="submit">
+                        Add Campground
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div class="pb-5 mb-3">
+            <div class="container">
+                <img src="../assets/Logo.svg" alt="">
+            </div>
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
